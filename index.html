@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <meta charset="UTF-8">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css"
+    </head>
+    
+    <body>
+
+        <header>
+            <div class="caja">
+            <h1><img src="imagenes/Vector.png" alt="Logo de la pagina alura encriptador"></h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="entrada">
+                <input type="text" id="Area_de_texto" placeholder="Ingrese el texto aqui"></input>
+                <p>&#128712 Solo letras minúsculas y sin acentos</p>
+                <input type="button" value="Encriptar" onclick="encriptar();" id="Encriptar">
+                <input type="button" value="Desencriptar" onclick="desencriptar();" id="Desencriptar">
+            </div>
+
+            <div class="traduccion">
+                <img id="texto_vacio" src="imagenes/busqueda_vacia.png" alt="Texto no encontrado" >
+                <div class="mensaje-no-encontrado">
+                    <h2 id="Mensaje-vacio">Ningun mensaje fue encontrado</h2>
+                    <p id="Peticion-encriptar">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+                <textarea id="Resultado" disabled></textarea>
+                <input type="button" value="Copiar" onclick="copiarPortapapeles();" id="Copiar_texto">
+            </div>
+            
+        </main>
+
+        <script>
+            var textoEncriptado = [];
+            var textoDesencriptado = [];
+            var textoAuxa = [];
+            var textoAuxe = [];
+            var textoAuxi = [];
+            var textoAuxo = [];
+            var textoAuxu = [];
+
+            function imprimir(frase){
+                document.write(frase);
+                document.write("<br>");
+            }
+
+            function encriptar(texto){
+                var texto = document.getElementById("Area_de_texto").value;
+                for(var i=0;i<texto.length;i++){
+                    if(texto.charAt(i)=='a'){
+                        textoEncriptado += "ai";
+                    }
+
+                    else if(texto.charAt(i)=='e'){
+                        textoEncriptado += "enter";
+                    }
+
+                    else if(texto.charAt(i)=='i'){
+                        textoEncriptado += "imes";
+                    }
+
+                    else if(texto.charAt(i)=='o'){
+                        textoEncriptado += "ober"
+                    }
+
+                    else if(texto.charAt(i)=='u'){
+                        textoEncriptado += "ufat"
+                    }
+
+                    else{
+                        textoEncriptado = textoEncriptado + texto.charAt(i);
+                    }
+                }
+
+                //imprimir(textoEncriptado);
+                ocultar();
+                document.getElementById("Resultado").innerHTML = textoEncriptado;
+                textoEncriptado = [];
+            }
+
+            function desencriptar(texto){
+                var texto = document.getElementById("Area_de_texto").value;
+                textoAuxa = texto.replaceAll("ai","a");
+                textoAuxe = textoAuxa.replaceAll("enter","e");                
+                textoAuxi = textoAuxe.replaceAll("imes","i");                
+                textoAuxo = textoAuxi.replaceAll("ober","o");                
+                textoAuxu = textoAuxo.replaceAll("ufat","u");
+                textoDesencriptado = textoAuxu;
+                ///imprimir(textoDesencriptado);
+                ocultar();
+                document.getElementById("Resultado").innerHTML = textoDesencriptado;
+                textoDesencriptado = [];
+            }
+
+            function copiarPortapapeles(){
+                var copiarTexto = document.getElementById("Resultado");
+                copiarTexto.select();
+                copiarTexto.setSelectionRange(0,99999);
+                navigator.clipboard.writeText(copiarTexto.value);
+                //alert("Texto copiado: " + copiarTexto.value);
+                //window.location.href = window.location.href;
+            }
+
+            function ocultar(){
+                document.getElementById("texto_vacio").style.display= "none";
+                document.getElementById("Mensaje-vacio").style.display="none";
+                document.getElementById("Peticion-encriptar").style.display="none";
+            }
+
+        </script>
+
+    </body>
+
+    <footer>
+        <p class="copyright"> &copy Copyright Brandon Ortiz Lopez</p>
+    </footer>
+
+
+
+</html>

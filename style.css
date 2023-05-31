@@ -1,0 +1,275 @@
+body{
+    background: #E5E5E5;
+}
+
+header{
+    padding: 20px,0;
+}
+
+.caja{
+    position: absolute;
+    width: 32px;
+    left: 5%;
+    right: 9%;
+    top: 5%;
+    bottom: 10%;
+}
+
+.entrada{
+    display: flex;
+    width: 600px;
+    height: 48px;
+    left: 100px;
+    top: 168px;
+}
+
+#Area_de_texto{
+    background: #E5E5E5;
+    position: absolute;
+    width: 40%;
+    height: 10%;
+    left: 10%;
+    top: 15%;
+    -webkit-text-fill-color: #0A3871;
+    border-style: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+}
+
+.entrada p{
+    width: 60%;
+    margin-top: 95%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 40;
+    font-size: 15px;
+    text-align: center;
+    color:#343a40
+}
+
+#Encriptar{
+    /* Button */
+    border-style: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 5px;
+    text-align: center;
+
+    /* White */
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+
+    position:absolute;
+    top:600px;
+    right:700px;
+    left:100px;
+    bottom:auto;
+    padding: 24px;
+    gap: 8px;
+    width: 250px;
+    height: 50px;
+
+    /* Dark blue/dark-blue-300 */
+
+    background: #0A3871;
+    border-radius: 24px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#Encriptar:hover{
+    background: cornflowerblue;
+}
+
+#Desencriptar{
+    /* Button */
+    border-style: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 5px;
+    text-align: center;
+
+    /* White */
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+
+    position:absolute;
+    top:600px;
+    right:700px;
+    left:400px;
+    bottom:auto;
+    padding: 24px;
+    gap: 8px;
+    width: 250px;
+    height: 50px;
+
+    /* Dark blue/dark-blue-300 */
+
+    background: #0A3871;
+    border-radius: 24px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#Desencriptar:hover{
+    background: cornflowerblue;
+}
+
+.traduccion{
+    display: flex;
+    justify-content: center;
+    position:absolute;
+    width: 400px;
+    height: 550px;
+    left: 800px;
+    top: 40px;
+    background: #FFFFFF;
+    border-radius: 20px;
+
+}
+
+#texto_vacio{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+
+}
+
+.mensaje-no-encontrado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap:16px;
+    position: absolute;
+    width: 100%;
+    top: 65%;
+}
+
+.mensaje-no-encontrado h2{
+    width: 60%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color:#343a40
+}
+
+.mensaje-no-encontrado p{
+    width: 80%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+}
+
+#Resultado{
+    background-color: transparent;
+    border-style: none;
+    position: absolute;
+    width: 100%;
+    height: 95%;
+
+    /*Fuente de texto*/
+    font-family: 'Inter';
+    font-style: normal;
+    margin-top: 10px;
+    margin-left: 5%;
+    text-align: left;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+}
+
+#Copiar_texto{
+     /* Button */
+     border-style: none;
+     font-family: 'Inter';
+     font-style: normal;
+     font-weight: 400;
+     font-size: 16px;
+     line-height: 5px;
+     text-align: center;
+ 
+     /* White */
+     color: #FFFFFF;
+ 
+ 
+     /* Inside auto layout */
+     flex: none;
+     order: 0;
+     flex-grow: 1;
+ 
+     position:absolute;
+     top:560px;
+     left:40%;
+     bottom:auto;
+     padding: 24px;
+     gap: 8px;
+     width: 250px;
+     height: 50px;
+ 
+     /* Dark blue/dark-blue-300 */
+ 
+     background: #0A3871;
+     border-radius: 24px;
+ 
+     /* Inside auto layout */
+     flex: none;
+     order: 0;
+     flex-grow: 0;
+}
+
+#Copiar_texto:hover{
+    background: cornflowerblue;
+    transform: scale(1.2);
+}
+
+footer{
+    text-align: center;
+    padding-top: 50%;
+    color: #0A3871;
+}
+
+@media screen and(max-width-480px) {
+    .entrada,.traduccion{
+        width: auto;
+    }
+
+    #Area_de_texto,#texto_vacio,#Resultado{
+        width: 100%;
+    }
+    
+}
